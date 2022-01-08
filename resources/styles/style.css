@@ -1,0 +1,254 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 1.7;
+  width: 100%;
+}
+
+/* section header*/
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+
+}
+
+.logo-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6rem;
+  flex-wrap: wrap;
+}
+
+.logo-nav-container img {
+  width: 120px;
+  height: auto;
+  transition: 1.5s;
+}
+
+.menu i {
+  z-index: 4;
+  font-size: 3rem;
+  color: #fff;
+  display: none;
+}
+
+/* esto se agrega cuando se hace el scroll */
+
+header.abajo {
+  background-color: rgba(24,24,29,.9);
+  border-bottom: 1px solid #5b5b60;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+/* ------------------ */
+
+.navigation ul li {
+  display: inline-block;
+}
+
+.navigation ul li a {
+  color: white;
+  font-size: 1rem;
+  padding: 0.3rem 2rem;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 960px){
+  .logo-nav-container{
+    padding: 1rem 3rem;
+  }
+
+  .navigation ul li a {
+    font-size: 0.9rem;
+    padding: 0.3rem 1.5rem;
+  }
+
+  .logo-nav-container img {
+    width: 100px;
+  }
+
+}
+
+@media only screen and (max-width: 750px){
+  .navigation ul li {
+    display: block;
+  }
+
+  .navigation {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 0.5rem 0;
+    font-weight: 500;
+  }
+  
+  .menu i {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navigation ul {
+    display: none;
+  }
+
+  .navigation ul.show {
+    display: block;
+  }
+
+  .logo-nav-container img {
+    width: 60px;
+  }
+
+  .menu i {
+    font-size: 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .logo-nav-container{
+    padding: 1rem 2rem;
+  }
+}
+
+/*section banner*/
+
+.main{
+  width: 100%;
+  height: 100vh;
+}
+
+#banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-image: url("../images/fondo4.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+
+.overlay {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background: #000;
+  z-index: 2;
+  opacity: 0.5;
+}
+
+/* animation texto banner */
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 2s steps(22), blink 0.6s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+  color: #fff;
+  opacity: 0.7;
+  position: absolute;
+  z-index: 3;
+
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+/* .................................*/
+
+@media only screen and (max-width: 750px) {
+  .typing-demo {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .imagen-container {
+    width: 100%;
+    height: 70vh;
+    display: block;
+    top: 0;
+  }
+
+  /* animation texto banner */
+
+  .typing-demo {
+    width: 22ch;
+    animation: typing 2s steps(22), blink 0.6s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 1em;
+    opacity: 0.7;
+    position: absolute;
+    z-index: 3;
+    top: 30%;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+/* .................................*/
+}
+
+
+
