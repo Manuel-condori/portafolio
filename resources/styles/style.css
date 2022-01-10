@@ -50,12 +50,12 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 6rem;
+  padding: 1rem 6rem 0.4rem;
   flex-wrap: wrap;
 }
 
 .logo-nav-container img {
-  width: 8%;
+  width: 60%;
   height: auto;
   transition: 1.5s;
 }
@@ -85,7 +85,7 @@ header.abajo {
 .navigation ul li a {
   color: white;
   font-size: 1rem;
-  padding: 0.3rem 2rem;
+  padding: 0 2rem;
   font-weight: 500;
 }
 
@@ -153,7 +153,7 @@ header.abajo {
 
 .main{
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 
 #banner {
@@ -275,6 +275,7 @@ header.abajo {
 
 .content-about-me {
   display: flex;
+  //border: solid 2px #00babc;
 }
 
 .subtitule{
@@ -387,16 +388,9 @@ header.abajo {
 
 /* section projects */
 
-#projects {
-  background-color: #29292E;
-
-}
-
 .project-container {
-  padding: 6rem 12rem;
-  display: flex;
-  flex-direction: column;
-
+  background-color: #29292E;
+  padding: 2% 5%;
 }
 
 .subtitule {
@@ -411,40 +405,23 @@ header.abajo {
   width: 100%;
 }
 
-.project{
-  font-size: 2%;
-  font-weight: 200;
-  color: white;
-  width: 50%;
+.project-step{
+  width: 30%;
   position: relative;
   overflow: hidden;
+  margin: 0.5% 1.5%;
 }
 
-.items-container .project img{
+.items-container .project-step .project {
+  background-color: #00babc;
   width: 100%;
   height: auto;
-}
-
-.items-container .one {
-  background-color: #8f3783;
-}
-
-.items-container .two {
-  background-color: #00babc;
-}
-
-.items-container .three {
-  background-color: #00babc;
-}
-
-.items-container .four {
-  background-color: #8f3783;
 }
 
 /* animation for text center of projects */
 
 .container-text {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
   color: white;
   font-weight: 500;
@@ -471,20 +448,43 @@ header.abajo {
   
 }
 
-.project:hover .container-text {
+.project-step:hover .container-text {
   transform: translateY(0%);
 }
 
-/* -------------------------------------*/
+@media only screen and (max-width: 960px){
 
-/* section Post *//*
-#posts {
-  background-color: #18181d;
-
+  .items-container {
+    display: flex;
+    justify-content: center;
+  }
+  .project-step {
+    width: 45%;
+  }
 }
 
+@media only screen and (max-width: 750px) {
+  .project-step {
+    width: 100%;
+  }
+
+  .container-text {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container-text {
+    font-size: 0.6rem;
+  }
+}
+
+
+/* section Post */
+
 .posts-container {
-  margin: 3rem 12rem;
+  background-color: #18181D;
+  padding: 2% 5%;
   display: flex;
   flex-direction: column;
 
@@ -493,46 +493,71 @@ header.abajo {
 
 .container-post {
   display: flex;
+  justify-content: center;
+  align-items: top;
   flex-wrap: wrap;
 }
 
 .post {
-  border: solid 0.1px red;;
-  padding-top: 3rem;
+  border: solid 2px #00babc;
   width: 45%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
-  margin: 0 2%;
-}
-
-.post h2{
-  font-size: 1.8rem;
-  color: white;
+  text-align: justify;
+  padding: 1.5%;
+  margin: 1% 1.5% ;
 }
 
 .post img {
-  padding-top: 1rem;
-  width: 300px;
+  padding: 1rem 0;
+  width: 70%;
   height: auto;
 }
 
+@media only screen and (max-width: 750px) {
+
+  .container-post{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post {
+    width: 96%;
+    height: auto;
+    padding: 1% 5%;
+  }
+
+  .post img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+
 /* footer */
-/*
+
 .footer {
-  background-color: black;
+  background-color: #29292E;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
+  font-size: 1.3rem;
 }
 
 .heart {
   color: red;
 }
-*/
 
+@media only screen and (max-width: 480px) {
+
+  .footer {
+    font-size: 1rem;
+  }
+}
 /*
 
 .........................................................................
