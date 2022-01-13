@@ -308,11 +308,14 @@ header.abajo {
   align-items: center;
   text-align: center;
   border: solid 2px #00babc;
+  padding-top: 2%;
+
 }
 
 .about-me-container .imagen-container2 img {
   width: 60%;
   height: auto;
+  padding: 5% 0;
 }
 
 .about-me-container .imagen-container2 h3 {
